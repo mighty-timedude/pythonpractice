@@ -13,8 +13,8 @@ movies = [{'mTitle': 'Armageddon', 'mType': 'Disaster Film/Thriller', 'mreleaseD
 def inject_now():
     return {'now': datetime.utcnow()}
 
-@app.route('/')
 @app.route('/dashboard')
+@app.route('/')
 def index():
 	return render_template('index.html', title='DashBoard')
 
