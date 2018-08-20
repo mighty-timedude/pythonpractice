@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<div class="col-md-12"> 
+		<legend class="mt-3">Movie List</legend>
+			<small class="text-muted"> View your list of Favorite Movies - if you want to add another one <a href="#">Click Here</a></small>
+					<div class="col-md-6 mt-5">
+							<table class="table table-hover">
+							  <thead>
+							    <tr>
+							      <th scope="col">Movie Title</th>
+							      <th scope="col">Movie Type</th>
+							      <th scope="col">Release Date</th>
+							      <th scope="col">Featured Song</th>
+							      <th scope="col">Director</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							  	{% for movie in movies %}
+							    <tr>
+							      <th>{{ movie.mTitle }}</th>
+							      <td>{{ movie.mType }}</td>
+							      <td>{{ movie.mreleaseDate }}</td>
+							      <td>{{ movie.mfeaturedSong }}</td>
+							      <td>{{ movie.mDirector }}</td>
+							    </tr>
+							    {% endfor %}
+							    
+							  </tbody>
+							</table>
+					</div>
+	</div>
+{% endblock %}
